@@ -35,7 +35,10 @@ set REPACK=%REPACK:.cbr=.cbz%
 set REPACK=%REPACK:.cbt=.cbz%
 set REPACK=%REPACK:).cbz=-Repack).zip%
 set TMPDIR=%TEMP%\MangaToolsnke
-if %~x1 EQU .cbz copy "%ORIGINAL%" "%REPACK%"
+if %~x1 EQU .cbz (
+  copy "%ORIGINAL%" "%REPACK%"
+  7z d "%REPACK%" * -r
+)
 rd /S /Q %TMPDIR%
 7z e -o"%TMPDIR%" "%ORIGINAL%"
 echo "%TMPDIR%"
