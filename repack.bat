@@ -42,8 +42,8 @@ if %~x1 EQU .cbz (
 rd /S /Q %TMPDIR%
 7z e -o"%TMPDIR%" "%ORIGINAL%"
 echo "%TMPDIR%"
-pingo_b63 -uncompress -strip=0 "%TMPDIR%\*"
-pingo -jpgtype=0 -sb -nostrip "%TMPDIR%\*"
+pingo_b63 -uncompress -strip=0 "%TMPDIR%\*.jpg"
+pingo -jpgtype=0 -sb -nostrip "%TMPDIR%\*.jpg"
 7z a -mx=0 -mtc=off "%REPACK%" "%TMPDIR%\*.*"
 move "%REPACK%" "%REPACK:.zip=.cbz%"
 rd /S /Q %TMPDIR%
