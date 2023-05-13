@@ -3,9 +3,10 @@
 // @namespace   Userscripts
 // @match       https://mangadex.org/chapter/*
 // @grant       GM_xmlhttpRequest
-// @version     0.1.0
+// @version     0.1.1
 // @author      danke
-// @description 5/13/2023
+// @description Redirect from MangaDex chapter links to Cubari
+// @downloadURL https://github.com/JodanJodan/MangaToolsnke/raw/main/cubanke.user.js
 // ==/UserScript==
 
 const API_BASE_URL = "https://api.mangadex.org"
